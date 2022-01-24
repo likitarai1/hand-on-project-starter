@@ -1,0 +1,77 @@
+// MEDIA QUERY
+@mixin media($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 60em) {
+      @content;
+    }
+  }
+}
+
+// VARIABLES
+
+$color-text: #404040;
+
+// .card {
+//   position: absolute;
+//   width: 330px;
+//   height: 190px;
+//   // margin-top: 25%;
+//   // margin-left: 20%;
+
+//   &__img {
+//     display: block;
+//     width: 330px;
+//     height: 190px;
+//     object-fit: cover;
+//   }
+
+//   &__content {
+//     padding: 10px 10px;
+//   }
+
+//   &__header {
+//     font-size: 19px;
+//     color: #0d0d0d;
+//     margin-bottom: 1.5rem;
+//   }
+
+//   &__text {
+//     letter-spacing: 0.1rem;
+//     line-height: 1.7;
+//     color: darken($color-text, 1%);
+//     margin-bottom: 2.5rem;
+//   }
+
+//   @include media(small)
+// }
+
+
+.card {
+  &__img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+   }
+  
+  &__content {
+    padding: 30px 30px;
+    
+  }
+  
+  &__header {
+    font-size: 25px;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__text {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: darken($color-text, 1%);
+    // overflow-wrap: break-word;
+  }
+  
+}

@@ -1,0 +1,99 @@
+@import "./../../utils/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+@mixin view {
+  @media (max-width: 960px) {
+    display: none;
+  }
+}
+
+.outerdiv {
+  //   border: 1px solid black;
+  position: absolute;
+  width: 80%;
+  height: 186px;
+  left: 10%;
+  top: 16%;
+  background: #c3e7fd;
+  border-radius: 10px;
+
+  button {
+    background: $dark;
+    color: $light;
+    right: 40px;
+    top: 37.5%;
+    @media (max-width: 1155px) {
+      top: 60%;
+    }
+    &:hover {
+      background: $light;
+      color: $dark;
+    }
+  }
+}
+
+.purplerect {
+  position: absolute;
+  width: 380px;
+  height: 186px;
+  top: 0;
+  left: 0;
+  background: #d3b4f6;
+  border-radius: 1000px 100px 100px 1000px;
+  transform: rotate(-180deg);
+
+  @include view;
+}
+
+.bgremoveimgdiv {
+  position: absolute;
+  width: 284px;
+  height: 186px;
+  background: url("./../../utils/images/bgremove.svg");
+  background-position-x: right;
+  border-radius: 10px 0px 0px 10px;
+  @include view;
+}
+
+.bgremovetext {
+  position: absolute;
+  width: 60%;
+  height: 40%;
+  left: 410px;
+  top: 5%;
+  @media (max-width: 1155px) {
+    top: -8%;
+  }
+  @media (max-width: 960px) {
+    left: 4%;
+  }
+  @media (max-width: 960px) {
+    width: 90%;
+  height: 40%;
+  }
+  // @media (max-width:970px) {
+  //   left: 316px;
+  // }
+  h1 {
+    font-size: 30px;
+    margin-top: 45px;
+    // line-height: 58px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    /* primary text */
+
+    color: #1e272e;
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 28px;
+    margin-top: -15px;
+    letter-spacing: -0.02em;
+    color: #566474;
+    @media (max-width: 503px) {
+      display: none;
+    }
+  }
+}

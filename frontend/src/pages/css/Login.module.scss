@@ -1,0 +1,61 @@
+@import "./../../utils/variables.scss";
+
+.container {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.infoContainer {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: rgba(247, 248, 250, 0.5);
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 90%;
+  }
+}
+
+.formContainer {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: $light;
+  top: 0;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBox {
+  width: 60%;
+    height: 330px;
+    padding: 10%;
+  border: 2px solid $lightGray;
+  border-radius: 5px;
+  &__h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  button {
+    background: $btnbg;
+    color: $light;
+    margin-top: 10%;
+    width: 60%;
+  }
+
+  input {
+    margin-top: 10%;
+    width: 90%;
+  }
+}
