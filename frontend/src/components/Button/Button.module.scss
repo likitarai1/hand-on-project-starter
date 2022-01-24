@@ -1,0 +1,18 @@
+@import "./../../utils/variables.scss";
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: $borderRadius;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid transparent;
+  transition: 0.3s ease all;
+  position: absolute;
+  // &:hover {
+  //     border-color: $btnbg;
+  //     background: $light;
+  //     color: $btnbg;
+  // }
+}

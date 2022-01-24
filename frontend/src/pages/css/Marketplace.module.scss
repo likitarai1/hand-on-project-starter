@@ -1,0 +1,92 @@
+@import "./../../utils/variables.scss";
+
+@mixin media($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 60em) {
+      @content;
+    }
+  }
+}
+
+.mainDiv {
+  background: $bodybg;
+  position: relative;
+  width: 100%;
+}
+
+.bannerDiv {
+  position: relative;
+  height: 270px;
+}
+
+.cardDiv {
+  position: relative;
+  padding: 0% 10%;
+}
+
+.mainGrid {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 6px;
+}
+
+// .grid {
+//   display: grid;
+//   width: 114rem;
+//   grid-gap: 6rem;
+//   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+//   align-items: start;
+//   font-size: 62.5%;
+
+//   &__item {
+//     background-color: #fff;
+//     border-radius: 0.4rem;
+//     overflow: hidden;
+//     // width: 50px;
+//     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+//     cursor: pointer;
+//     transition: $transition;
+
+//     &:hover {
+//       transform: translateY(-0.5%);
+//       box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+//     }
+//   }
+
+//   @include media(small) {
+//     grid-gap: 3rem;
+//   }
+// }
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(207px, 1fr)
+    );
+    align-items: start;
+    font-size: 62.5%;
+    
+    @include media(small) {
+        grid-gap: 3rem;
+     }
+    
+    &__item {
+      background-color: #fff;
+      border-radius: .4rem;
+      overflow: hidden;
+      // width: 50px;
+      box-shadow: 0 3rem 6rem rgba(0, 0, 0, .1);
+      cursor: pointer;
+    //   transition: $transition;
+      
+      &:hover {
+        transform: translateY(-.5%);
+        box-shadow: 0 4rem 8rem rgba(0, 0, 0, .2);
+      }
+    }
+  }
+  
